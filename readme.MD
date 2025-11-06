@@ -1,6 +1,6 @@
 ## Model Comparison
 
-| Feature | MobileSAM | ViT-B (Segment Anything) |
+| Feature | MobileSAM | ViT-B (float16 quantized) |
 |----------|------------|---------------------------|
 | **Architecture** | Lightweight Mobile-ViT backbone | Full Vision Transformer (ViT-B) |
 | **Model Type** | Compressed and optimized | Original SAM (Meta AI) |
