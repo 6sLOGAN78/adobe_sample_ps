@@ -30,4 +30,6 @@ Use **ViT-B** for higher segmentation precision where computational cost is acce
 |--------|----------------|--------------|
 | **MobileSAM** | <img src="complete_masking_example_by_different_models/sam_mobile.png" width="300"/> | Lightweight and fast — ideal for mobile and real-time use. |
 | **ViT-B** | <img src="complete_masking_example_by_different_models/sam_vitb.png" width="300"/> | High accuracy and precision — suited for desktop or offline segmentation. |
-| **YOLO-v8-seg** | <img src="complete_masking_example_by_different_models/yolov8seg.png" width="300"/> | High accuracy and precision — suited for desktop or offline segmentation. |
+| **MobileSAM** | <img src="complete_masking_example_by_different_models/sam_mobile2.png" width="300"/> | Lightweight and fast — ideal for mobile and real-time use. |
+| **ViT-B** | <img src="complete_masking_example_by_different_models/sam_vitb2.png" width="300"/> | High accuracy and precision — suited for desktop or offline segmentation. 
+| **YOLO-v8-seg** | <img src="complete_masking_example_by_different_models/yolov8seg.png" width="300"/> | very -fast can be used in simple object detection and masking. |
