@@ -21,3 +21,12 @@
 **Summary:**  
 Use **MobileSAM** for fast, lightweight, and interactive segmentation — perfect for real-time and edge applications.  
 Use **ViT-B** for higher segmentation precision where computational cost is acceptable.
+
+---
+
+## Visualization Comparison
+
+| Model | Visualization | Description |
+|--------|----------------|--------------|
+| **MobileSAM** | <img src="complete_masking_example_by_different_models/sam_mobile.png" width="300"/> | Lightweight and fast — ideal for mobile and real-time use. |
+| **ViT-B** | <img src="complete_masking_example_by_different_models/sam_vitb.png" width="300"/> | High accuracy and precision — suited for desktop or offline segmentation. |
