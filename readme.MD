@@ -6,7 +6,7 @@
 | **Model Type** | Compressed and optimized | Original SAM (Meta AI) |
 | **ONNX Model Size** | ~50 MB | ~600 MB |
 | **Speed (CPU)** | Very fast — ideal for real-time | Moderate — heavier compute load |
-| **Model Load Time (CPU)** | ~6 seconds | ~15–20 seconds |
+| **Model Load Time (CPU)** | ~3 seconds | ~15–20 seconds |
 | **Memory Usage (RAM)** | ~3 GB | ~6–8 GB |
 | **Segmentation Accuracy** | Good — slightly coarse edges | Excellent — fine-grained masks |
 | **Prompt Encoder** | Same SAM prompt encoder | Same SAM prompt encoder |
@@ -30,3 +30,4 @@ Use **ViT-B** for higher segmentation precision where computational cost is acce
 |--------|----------------|--------------|
 | **MobileSAM** | <img src="complete_masking_example_by_different_models/sam_mobile.png" width="300"/> | Lightweight and fast — ideal for mobile and real-time use. |
 | **ViT-B** | <img src="complete_masking_example_by_different_models/sam_vitb.png" width="300"/> | High accuracy and precision — suited for desktop or offline segmentation. |
+| **YOLO-v8-seg** | <img src="complete_masking_example_by_different_models/yolov8seg.png" width="300"/> | High accuracy and precision — suited for desktop or offline segmentation. |
