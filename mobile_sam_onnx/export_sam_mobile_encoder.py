@@ -1,17 +1,12 @@
 import torch
 from mobile_sam import sam_model_registry
-
 checkpoint = "../mobile_sam_onnx/mobile_sam.pt"
 model = sam_model_registry["vit_t"](checkpoint=checkpoint)
 model.eval()
-
 encoder = model.image_encoder
 decoder = model.mask_decoder
 image_pe = model.prompt_encoder.get_dense_pe() 
-
-# ------------------ Export Encoder ------------------
 dummy_image = torch.randn(1, 3, 1024, 1024)
-
 torch.onnx.export(
     encoder,
     dummy_image,
@@ -40,11 +35,9 @@ class DecoderWrapper(torch.nn.Module):
         return masks, iou_scores
 
 wrapper = DecoderWrapper(decoder, image_pe)
-
 image_embedding = encoder(dummy_image)
 sparse = torch.zeros(1, 2, decoder.transformer_dim)
 dense = torch.zeros(1, decoder.transformer_dim, 64, 64)
-
 torch.onnx.export(
     wrapper,
     (image_embedding, sparse, dense),
@@ -54,5 +47,4 @@ torch.onnx.export(
     opset_version=17,
     do_constant_folding=True,
 )
-
 print("Decoder saved as mobile_sam_decoder.onnx")
